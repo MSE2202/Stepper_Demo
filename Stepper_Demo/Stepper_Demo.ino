@@ -7,7 +7,7 @@
 //  Date:     2025 02 25
 //
 //  Note that this code does not implement any acceleration or deceleration. The stepper may "lock up" if the
-//  direction is changed when the motor is spinning quickly or when if the speed increases too quickly.
+//  direction is changed when the motor is spinning quickly or if the speed increases too quickly.
 //
 
 #define STEP_OUTPUT_ON                                                 // uncomment to turn on output of stepper motor information
