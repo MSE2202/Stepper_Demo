@@ -80,7 +80,7 @@ void setup() {
 
   pinMode(cToggle1, INPUT_PULLUP);                                     // configure GPIO to turn stepper on/off 
   pinMode(button.pin, INPUT_PULLUP);                                   // configure GPIO for button pin as an input with pullup resistor
-  attachInterruptArg(button.pin, buttonISR, &button, FALLING);         // Configure ISR to trigger on low signal on pin
+  attachInterruptArg(button.pin, buttonISR, &button, FALLING);         // configure ISR to trigger on low signal on pin
   pinMode(cPotPin, INPUT);                                             // configure potentiometer pin for input
   pinMode(cStepPin, OUTPUT);                                           // assign output for step signal to A4988
   pinMode(cDirPin, OUTPUT);                                            // assign output for direction signal to A4988
@@ -145,7 +145,7 @@ void ARDUINO_ISR_ATTR buttonISR(void* arg) {
 
 // timer interrupt service routine
 void ARDUINO_ISR_ATTR timerISR() {
-  if (runState) {                                                      // Only send pulse if motor should be running
+  if (runState) {                                                      // only send pulse if motor should be running
     digitalWrite(cStepPin, !digitalRead(cStepPin));                    // toggle state of step pin
     if (stepDir) {
       stepCount++;                                                     // add to count in forward direction
